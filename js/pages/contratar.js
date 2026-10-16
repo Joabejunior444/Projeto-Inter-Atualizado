@@ -49,9 +49,9 @@ function wGo(n){
     const chavesEstimativas=W.savedEstimateKeys;
     if(!chavesEstimativas[chaveEstimativa]){
       chavesEstimativas[chaveEstimativa]=true;
-      fetch('http://localhost:8080/api/pedidos/estimar',{
+      fetch('https://heftiness-crummiest-wildly.ngrok-free.dev/api/pedidos/estimar',{
         method:'POST',
-        headers:{'Content-Type':'application/json'},
+        headers:{'Content-Type':'application/json','ngrok-skip-browser-warning':'69420'},
         body:JSON.stringify(pedidoEstimativa)
       })
         .then(response=>{

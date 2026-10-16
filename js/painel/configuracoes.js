@@ -100,9 +100,9 @@ async function confirmarExclusao(){
   const botao=$('#btnConfirmarExclusao');
   if(botao)botao.disabled=true;
   try{
-    const resposta=await fetch('http://localhost:8080/api/auth/conta',{
+    const resposta=await fetch('https://heftiness-crummiest-wildly.ngrok-free.dev/api/auth/conta',{
       method:'DELETE',
-      headers:{'Content-Type':'application/json'},
+      headers:{'Content-Type':'application/json','ngrok-skip-browser-warning':'69420'},
       body:JSON.stringify({email:usuario.email,senha:usuario.pass})
     });
     if(!resposta.ok){

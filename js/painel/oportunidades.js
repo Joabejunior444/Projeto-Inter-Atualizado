@@ -40,7 +40,10 @@ function carregarPedidos(){
   const container=document.getElementById('mural-pedidos');
   if(!container)return Promise.resolve();
   container.innerHTML='<div class="card center" style="padding:30px"><div class="radar">'+ic('target')+'</div><b>Carregando pedidos salvos…</b></div>';
-  return fetch('http://localhost:8080/api/pedidos',{method:'GET'})
+  return fetch('https://heftiness-crummiest-wildly.ngrok-free.dev/api/pedidos',{
+    method:'GET',
+    headers:{'ngrok-skip-browser-warning':'69420'}
+  })
     .then(response=>{
       if(!response.ok)throw new Error('Falha ao carregar pedidos: HTTP '+response.status);
       return response.json();

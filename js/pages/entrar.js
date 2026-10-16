@@ -147,9 +147,9 @@ async function doAuth(e){
     const botao=e.submitter||e.target.querySelector('button[type="submit"]');
     if(botao)botao.disabled=true;
     try{
-      const resposta=await fetch('http://localhost:8080/api/auth/login',{
+      const resposta=await fetch('https://heftiness-crummiest-wildly.ngrok-free.dev/api/auth/login',{
         method:'POST',
-        headers:{'Content-Type':'application/json'},
+        headers:{'Content-Type':'application/json','ngrok-skip-browser-warning':'69420'},
         body:JSON.stringify({email:email,senha:pass})
       });
       if(!resposta.ok)throw new Error('Credenciais inválidas');
@@ -199,9 +199,9 @@ async function doAuth(e){
       tipo:A.role
     };
     const criarConta=async()=>{
-      const response=await fetch('http://localhost:8080/api/auth/registrar',{
+      const response=await fetch('https://heftiness-crummiest-wildly.ngrok-free.dev/api/auth/registrar',{
         method:'POST',
-        headers:{'Content-Type':'application/json'},
+        headers:{'Content-Type':'application/json','ngrok-skip-browser-warning':'69420'},
         body:JSON.stringify(usuario)
       });
       if(!response.ok){
